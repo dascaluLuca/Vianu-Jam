@@ -399,6 +399,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1562111893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e07d49e90874d70b9937cb753327a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: sc.terrain.painter.runtime::sc.terrain.proceduralpainter.Noise
+  enabled: 1
+  label: Noise
+  blendMode: 0
+  opacity: 100
+  passIndex: 4
+  noiseType: 0
+  noiseScale: 50
+  noiseOffset: {x: 0, y: 0}
+  levels: {x: 0.3201183, y: 1}
 --- !u!114 &1908398789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,7 +493,7 @@ Terrain:
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 182
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
@@ -531,6 +552,13 @@ MonoBehaviour:
   colorMapResolution: 1024
   layerSettings:
   - enabled: 1
+    layer: {fileID: 0}
+    modifierStack: []
+  - enabled: 1
+    layer: {fileID: 8574412962073106934, guid: 4e32022d306550941935a9898d9a184c, type: 2}
+    modifierStack:
+    - {fileID: 1562111893}
+  - enabled: 1
     layer: {fileID: 8574412962073106934, guid: 7ba7a711695a4904a86967c335f59fc9, type: 2}
     modifierStack:
     - {fileID: 273261602}
@@ -543,7 +571,7 @@ MonoBehaviour:
     modifierStack:
     - {fileID: 1908398789}
   - enabled: 1
-    layer: {fileID: 8574412962073106934, guid: a026f67c6452bb7488422ec75c67c660, type: 2}
+    layer: {fileID: 8574412962073106934, guid: bd1fcb10d2c5b5d4ba6e01a34e4735be, type: 2}
     modifierStack: []
   autoRepaint: 0
   terrainListeners: []
