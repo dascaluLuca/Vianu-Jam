@@ -293,7 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMotor
   Speed: 5
   Gravity: -9.8
-  JumpHigh: 3
+  JumpHigh: 1
   SprintSpeed: 15
 --- !u!114 &490734142
 MonoBehaviour:
