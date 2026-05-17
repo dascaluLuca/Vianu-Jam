@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     private PlayerInput.OnFootActions onFoot;
     private PlayerMotor motor;
     private PlayerLook look;
+    private PlayerInteract interact;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -15,6 +16,7 @@ public class InputManager : MonoBehaviour
         onFoot=playerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
+        interact = GetComponent<PlayerInteract>();
         
     }
     void Start()
@@ -42,6 +44,11 @@ public class InputManager : MonoBehaviour
             motor.SetSprint(true);
         else
             motor.SetSprint(false);
+
+        if (onFoot.Interact.WasPressedThisFrame())
+        {
+            interact.TryInteract();
+        }
         
     }
 
